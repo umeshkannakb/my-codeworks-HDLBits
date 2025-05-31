@@ -1,0 +1,10 @@
+module top_module (
+    input clk,
+    input d, input ena,  
+    output q);
+    always @(*) begin
+        iif(ena)
+          q=d;
+    end
+
+endmodule
