@@ -1,0 +1,14 @@
+module top_module (
+    input clk,
+    input w, R, E, L,
+    output Q
+);
+    wire mux1_out, mux2_out;
+
+    assign mux1_out = (E) ? w : Q;       // First MUX: select w or Q_in based on E
+    assign mux2_out = (L) ? R : mux1_out;   // Second MUX: select R or mux1_out based on L
+
+    always @(posedge clk)
+        Q <= mux2_out;
+
+endmodule
