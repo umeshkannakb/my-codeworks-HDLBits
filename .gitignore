@@ -1,0 +1,13 @@
+# Icarus Verilog
+a.out
+*.vvp
+*.vcd
+
+# ModelSim
+work/
+transcript
+vsim.wlf
+
+# OS
+.DS_Store
+Thumbs.db
